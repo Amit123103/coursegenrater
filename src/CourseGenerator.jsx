@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 
-const BASE_URL = "https://coursegenrater.onrender.com";
+const BASE_URL = "https://coursegenrater.onrender.com"; // Force build v2
 
 // ==========================================
 // MOCK API GENERATORS (FALLBACK)
