@@ -7,11 +7,9 @@ import {
     Volume2, MessageSquare, Flame, Star, Send, Cpu, Globe, Activity, HardDrive,
     Shield, ArrowRight, Home, Monitor
 } from 'lucide-react';
-import {
-    PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip,
-    ResponsiveContainer, AreaChart, Area, Radar, RadarChart, PolarGrid,
-    PolarAngleAxis, PolarRadiusAxis
-} from 'recharts';
+import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, BarChart, Bar, RechartsTooltip, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
+
+const BASE_URL = "https://coursegenrater.onrender.com";
 
 // ==========================================
 // MOCK API GENERATORS (FALLBACK)
@@ -308,7 +306,7 @@ export default function CourseGeneratorApp() {
     useEffect(() => {
         const checkBackend = async () => {
             try {
-                const res = await fetch('/api/health');
+                const res = await fetch(`${BASE_URL}/health`);
                 if (res.ok) setBackendStatus('connected');
                 else setBackendStatus('error');
             } catch {
@@ -383,7 +381,7 @@ export default function CourseGeneratorApp() {
             await new Promise(r => setTimeout(r, 800));
             setGenerationStep(2); // "Accessing Python AI Engine..."
 
-            const response = await fetch('/api/generate', {
+            const response = await fetch(`${BASE_URL}/generate`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
