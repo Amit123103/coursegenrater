@@ -7,6 +7,10 @@ import time
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def root():
+    return jsonify({"message": "AI Course Generator Backend is running!", "version": "1.0.0"}), 200
+
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({"status": "connected", "engine": "g4f-gpt4"}), 200
