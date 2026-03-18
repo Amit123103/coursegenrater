@@ -52,8 +52,8 @@ AI Course Generator is a powerful tool designed to create comprehensive, technic
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Amit123103/Intelligent-Recognition-Identification-System.git
-   cd Intelligent-Recognition-Identification-System/course
+   git clone https://github.com/Amit123103/coursegenrater.git
+   cd coursegenrater/course
    ```
 
 2. **Setup Backend**:
@@ -99,3 +99,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 Built with ❤️ by [Amit](https://github.com/Amit123103)
+
