@@ -20,3 +20,5 @@ brain/
 *.webp
 *.bat
 !start_all.bat
+!public/assets/bg/*.png
+!public/assets/bg/*.webp
